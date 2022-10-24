@@ -11,12 +11,13 @@ const onPlay = throttle(data => {
 
 player.on('timeupdate', onPlay);
 
+currentTime();
 function currentTime() {
   const savedTime = localStorage.getItem('videoplayer-current-time');
   if (savedTime) {
   player.setCurrentTime(savedTime);
 }
-}
-currentTime();
+};
+
 
 
